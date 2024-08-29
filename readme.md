@@ -14,5 +14,5 @@ I forked this project for a couple of reasons:
 2) I wanted to learn Xeto and be able to build and use it in axon
 3) I noticed the GL36 example wasn't how I'd personally interpret GL36 to be used in Xeto, so i updated it and provided comments.
 
-I hope you folks find my changes useful! Cheers - EnochRick
+I hope folks find my changes useful! Cheers - EnochRick
 
