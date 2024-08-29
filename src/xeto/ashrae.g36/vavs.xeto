@@ -5,20 +5,23 @@
 // This file includes five VAV templates from ASHRAE Guideline 36
 // Author: Avijit Saha, Jaime Gagne, Maggie Sullivan
 // Modified by: Rick Stehmeyer (hstehmeyer@albireoenergy.com)
-
+//
 // Suggested Marker Tags in the tags.pog file
 // override: Marker
 // window: Marker -- RS: I added a window switch sensor to misc-points.xeto as the window switch
 //                   is an input to the control system that can be used for fault detection
-//                   if the occupancy status or unit status doenst change in response to an
+//                   if the occupancy status or unit status doesn’t change in response to an
 //                   open window
-
-//  Guidline 36 base type for VAVs terminal units
+//  RS: Removed "coolingOnly" marker from dual duct VAVs, not the case for GL36, they're both heating and
+//          cooling applications.
+//  RS: Created variations of Fan-Powered Terminal Unit (Series or Parallel, Constant- or Variable-Speed Fan) 
+//
+//  Guideline 36 base type for VAVs terminal units
 //  The GL36 Document calls for optional local Override point intended to pickup
-//  a Zone Termonstat override pushbutton (for use when building is unocc, and someone
+//  a Zone Thermostat override pushbutton (for use when building is unocc, and someone
 //  comes in and needs occupied setpoints for a limited duration). This is folded into
 //  the "OccupiedSensor" optional point here. The functional end result of pressing this
-//  button is the same for analyitcs purposes. Same goes for GL36's Zone Temp Septoint Adj
+//  button is the same for analytics purposes. Same goes for GL36's Zone Temp Setpoint Adj
 //  and "ZoneAirTempEffectiveSp" here. 
 
 // Guidline 36 base type for VAVs terminal units
@@ -47,33 +50,82 @@ G36ReheatVav : G36Vav {
   hotWaterHeating
   singleDuct
   points: {
-    HotWaterValveCmd
+    HotWaterValveCmd // Mod. Valve OR Floating Actuator OR Mod. Electric Heating
     DischargeDamperCmd
     DischargeAirFlowSensor
     DischargeAirTempSensor
   }
 }
 
-//Guidline 36 Fan Powered Terminal Unit
-G36FanPoweredTerminalUnit : G36Vav {
+//Guidline 36 Constant Air Volume Series Fan Powered Terminal Unit
+G36SeriesConstFanPoweredTerminalUnit : G36Vav {
   fanPowered
+  constantAirVolume
+  hotWaterHeating
+  singleDuct
+  points: {
+    DischargeFanRunSensor?
+    DischargeFanRunCmd
+    DischargeDamperCmd
+    HotWaterValveCmd // Mod. Valve OR Floating Actuator OR Mod. Electric Heating
+    DischargeAirFlowSensor
+    DischargeAirTempSensor
+  }
+}
+
+//Guidline 36 Variable Air Volume Series Fan Powered Terminal Unit
+G36SeriesVarFanPoweredTerminalUnit : G36Vav {
+  fanPowered
+  variableAirVolume
   hotWaterHeating
   singleDuct
   points: {
     DischargeFanSpeedCmd
-    DischargeFanRunSensor
+    DischargeFanRunSensor? //in the variable speed fan this can be substituted for fan speed feedback
     DischargeFanRunCmd
     DischargeDamperCmd
-    HotWaterValveCmd
+    HotWaterValveCmd // Mod. Valve OR Floating Actuator OR Mod. Electric Heating
     DischargeAirFlowSensor
     DischargeAirTempSensor
   }
 }
 
-//Guidline 36 Dual-Duct Terminal Unit with Inlet Sensors
+//Guidline 36 Constant Air Volume Parallel Fan Powered Terminal Unit
+G36ParallelConstFanTerminalUnit : G36Vav {
+  fanPowered
+  constantAirVolume
+  hotWaterHeating
+  dualDuct //this tag is used in dual duct VAVs indicating dual inlets, applies here?
+  points: {
+    DischargeFanRunSensor
+    DischargeFanRunCmd
+    DischargeDamperCmd
+    HotWaterValveCmd // Mod. Valve OR Floating Actuator OR Mod. Electric Heating
+    DischargeAirFlowSensor
+    DischargeAirTempSensor
+  }
+}
+
+//Guidline 36 Variable Air Volume Parallel Fan Powered Terminal Unit
+G36ParallelVarFanPoweredTerminalUnit : G36Vav {
+  fanPowered
+  variableAirVolume
+  hotWaterHeating
+  dualDuct //this tag is used in dual duct VAVs indicating dual inlets, applies here?
+  points: {
+    DischargeFanSpeedCmd
+    DischargeFanRunSensor? //in the variable speed fan this can be substituted for fan speed feedback
+    DischargeFanRunCmd
+    DischargeDamperCmd
+    HotWaterValveCmd // Mod. Valve OR Floating Actuator OR Mod. Electric Heating
+    DischargeAirFlowSensor
+    DischargeAirTempSensor
+  }
+}
+
+//Guidline 36 Dual-Duct Terminal Unit with Inlet Sensors 
 G36DualDuctVavInlet : G36Vav {
   dualDuct
-  coolingOnly
   points: {
     ColdDeckDischargeDamperCmd
     HotDeckDischargeDamperCmd
@@ -82,10 +134,9 @@ G36DualDuctVavInlet : G36Vav {
   }
 }
 
-//Guidline 36  Dual-Duct Terminal Unit with Discharge Sensor
+//Guidline 36  Dual-Duct Terminal Unit with Discharge Sensor 
 G36DualDuctVavOutlet : G36Vav {
   dualDuct
-  coolingOnly
   points: {
     ColdDeckDischargeDamperCmd
     HotDeckDischargeDamperCmd
