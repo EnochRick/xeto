@@ -4,8 +4,6 @@
 //
 // This file includes five VAV templates from ASHRAE Guideline 36
 // Author: Rick Stehmeyer (hstehmeyer@albireoenergy.com)
-//
-// Note: I tried to use the "OR" Type Where there are comments here stating some equipment OR another
 //       
 
 // Guidline 36 base type for single zone AHU
@@ -32,33 +30,18 @@ G36SingleZoneAhu : Ahu {
         ZoneOccupiedSensor?
         WindowSwitch?
         ZoneCo2Sensor?
+        InletAirFlowSensor?
+        ReliefFanEnableCmd? //For units with a relief fan, include the following four points 
+        ReliefFanEnableSensor?
+        ReliefFanSpeedSensor?
+        ReliefDamperCmd? //can be modulating for units without fans, or two position for units with fans
+        ReturnFanRunCmd?
+        ReturnFanEnableSensor?
+        ReturnFanSpeedSensor?
+        // Exhaust Damper: For units with RF and speed Tracking, include this: damper may be barometric, assumes two position in Guideline.
+        // If unit has RF and direct building pressure control this is an modulating damper
+        ExhaustDamperCmd? 
+        ReturnAirPressureSensor? //for units with RF and direct building pressure control, indclude this: Differential Transducer at fan
+        SiteAirPressureSensor? //for units with direct building pressure control
   }
-}
-
-//Custom for GL36 AHUs////////////////////////////////////////////////
-
-// Cooling Signal Allows for either hydronic cooling or Direct Expansion, Analog Output
-CoolingSignal : ChilledWaterValveCmd | DxCoolingSignal
-
-// Heating Signal Allows for hydronic heatinging or Direct Expansion, or Electric Resistance Analog Output
-HeatingSignal : HotWaterValveCmd | DxHeatingSignal | ElecHeating
-
-//Analog output to a Variable-Capacity Dx Compressor 
-DxCoolingSignal : NumberPoint {
-    DxCooling
-    unit: "%"
-}
-
-//Analog output to a Variable-Capacity Dx Compressor 
-DxHeatingSignal : NumberPoint {
-    DxHeating
-    unit: "%"
-}
-
-//Outdoor air Fliter Pressure Drop (analog input)
-OutdoorAirFilterPressureSensor : NumberPoint {
-    outdoor
-    air
-    filter
-    sensor
 }

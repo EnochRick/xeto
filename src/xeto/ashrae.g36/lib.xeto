@@ -7,6 +7,13 @@
 //   29 Aug 2024 Rick Stehmeyer, v0.1.2 : Updated specs for VAVs
 //   29 Aug 2024 Rick Stehmeyer, v0.1.2 : Started adding AHUs
 //
+// Additional Global Notes:
+// In the Guideline, points are indicated either 
+//    A = Points that only APPLY if included by designer
+//    R = Required
+//    O = Optional Monitoring Points 
+//    In the XETO-type implementation here anything thats not required, is considered optional to
+//    allow fits() to show minimum fit required 
 
 pragma: Lib <
   doc: "ASHRAE Guideline 36 examples"
@@ -22,5 +29,3 @@ pragma: Lib <
     uri: "https://project-haystack.org/"
   }
 >
-
-
