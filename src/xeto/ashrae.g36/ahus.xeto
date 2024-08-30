@@ -1,0 +1,63 @@
+//
+// Copyright (c) 2022, Project-Haystack
+// Licensed under the Academic Free License version 3.0
+//
+// This file includes five VAV templates from ASHRAE Guideline 36
+// Author: Rick Stehmeyer (hstehmeyer@albireoenergy.com)
+//
+// Note: I tried to use the "OR" Type Where there are comments here stating some equipment OR another
+//       
+
+// Guidline 36 base type for single zone AHU
+G36SingleZoneAhu : Ahu {
+    directZone            //ahuZoneDelivery
+    variableAirVolume     //airVolumeAdjustability
+    chilledWaterCooling   //coolingProcess
+    singleDuct            //ductConfig (ductDeck doesn't apply to SZ Ahu)
+    hotWaterHeating       //heatingProcess
+    points: {
+        DischargeFanRunCmd
+        DischargeFanSpeedCmd
+        DischargeFanRunSensor?
+        DischargeAirTempSensor
+        OutsideDamperCmd //Modulating OA / RA Damper Command
+        OutsideAirTempSensor //Temperature Sensor at outdoor air intake
+        MixedAirTempSensor?
+        ReturnAirTempSensor?
+        OutdoorAirFilterPressureSensor?
+        CoolingSignal // Mod. Valve OR Variable-Capcity-Compressor 
+        HeatingSignal // Mod. Valve OR Modulating Electric Heating Coil
+        ZoneAirTempSensor
+        ZoneAirTempEffectiveSp
+        ZoneOccupiedSensor?
+        WindowSwitch?
+        ZoneCo2Sensor?
+  }
+}
+
+//Custom for GL36 AHUs////////////////////////////////////////////////
+
+// Cooling Signal Allows for either hydronic cooling or Direct Expansion, Analog Output
+CoolingSignal : ChilledWaterValveCmd | DxCoolingSignal
+
+// Heating Signal Allows for hydronic heatinging or Direct Expansion, or Electric Resistance Analog Output
+HeatingSignal : HotWaterValveCmd | DxHeatingSignal | ElecHeating
+
+//Analog output to a Variable-Capacity Dx Compressor 
+DxCoolingSignal : NumberPoint {
+    DxCooling
+    unit: "%"
+}
+
+DxHeatingSignal : NumberPoint {
+    DxHeating
+    unit: "%"
+}
+
+//Outdoor air Fliter Pressure Drop (analog input)
+OutdoorAirFilterPressureSensor : NumberPoint {
+    outdoor
+    air
+    filter
+    sensor
+}
