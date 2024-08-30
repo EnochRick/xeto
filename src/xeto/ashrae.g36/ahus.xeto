@@ -49,6 +49,7 @@ DxCoolingSignal : NumberPoint {
     unit: "%"
 }
 
+//Analog output to a Variable-Capacity Dx Compressor 
 DxHeatingSignal : NumberPoint {
     DxHeating
     unit: "%"
