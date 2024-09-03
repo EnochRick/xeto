@@ -37,15 +37,17 @@ First off I used VSCode to create a sort-of "prod" and "test" enviroment.  I do 
 > [!TIP]
 > Then to test in skyspark I do the following:
 
-> 1) copy the compliled xetolib file from my dev folder: \haxall\lib\xeto\ashrae.g36\ashrae.g36-0.X.X.xetolib
-   and paste it into skysparks xeto lib folder: skyspark\lib\xeto\ashrae.g36\
-> 2) reboot skyspark
-> 3) Open my test project
-> 4) goto "settings" app
-> 5) goto "using" tab
-> 6) enable the ashrae.g36 library (the version should match what you copied in)
-> 7) goto the "tools" app
-> 8) execute `xetoReload()` in the shell
-> 9) execute `specLibs()` in the shell to see that lib:ashrae.g36 shows up
-> 10) then run a test using the `fitsExplain()` command: example: `read(ahu).fitsExplain(G36SingleZoneAhu)` it should return something (usually whats missing for required points)
+> 1) copy the compliled xetolib file from my dev folder:
+>    `\haxall\lib\xeto\ashrae.g36\ashrae.g36-0.X.X.xetolib`
+>  and paste it into skysparks xeto lib folder:
+>     `\skyspark\lib\xeto\ashrae.g36\`
+> 3) reboot skyspark
+> 4) Open my test project
+> 5) goto "settings" app
+> 6) goto "using" tab
+> 7) enable the ashrae.g36 library (the version should match what you copied in)
+> 8) goto the "tools" app
+> 9) execute `xetoReload()` in the shell
+> 10) execute `specLibs()` in the shell to see that lib:ashrae.g36 shows up
+> 11) then run a test using the `fitsExplain()` command: example: `read(ahu).fitsExplain(G36SingleZoneAhu)` it should return something (usually whats missing for required points)
        
