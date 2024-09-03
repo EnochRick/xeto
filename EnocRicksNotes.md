@@ -38,6 +38,8 @@ https://github.com/haxall/haxall/releases
 
     ./xeto build ashrae.g36
 
+    ./xeto build ph.points
+
 ## My testing process:
 First off I used VSCode to create a sort-of "prod" and "test" enviroment.  I do all my production in a clone of the [haxall](https://github.com/haxall/haxall) repository.  Then I copy those changes (after they build and test to my satisfaction) to this repo and push them up.  
 
