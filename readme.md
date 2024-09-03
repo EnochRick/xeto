@@ -18,7 +18,7 @@ End of day update: Moved a bunch of new types into the misc-points.xeto.  Had to
 
 Known Issues:
 
-- [ ] #1: Ambiguous types for : CoolingSignal and HeatingSignal – I tried to set these up as OR types (trying to test how dynamic I can make the “fit” function).  Its throwing an “Ambiguous match for Point: ashrae.g36::CoolingSignal” error when using the “fitsExplain()”.  This is likely my fault for not quite working this out per Xeto’s intended use of “or” types. 
+- [ ] #1: Ambiguous types for : CoolingSignal and HeatingSignal – I tried to set these up as OR types (trying to test how dynamic I can make the “fit” function).  Its throwing an “Ambiguous match for Point: ashrae.g36::CoolingSignal” error when using the “fitsExplain()”.  This is likely my fault for not quite working this out per Xeto’s intended use of “or” types. I now see i need to make them a "choice" type and reference the applicable entitiy types for GL36. 
 
 - [ ] #2: SiteAirPressureSensor was created, and its intended to be a “Building Static Pressure” type, but I didn’t see a tag in Haystack for “whole building stuff” beyond the “site” tag.  Not sure the “site” tag’s intended use fits what I did here.  
 
