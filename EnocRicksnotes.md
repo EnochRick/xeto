@@ -1,6 +1,6 @@
 # Overview
 
-I am putting this together to help others build upon this work.  My goal is to try and make testing skyspark projects agains [ASHRAE's Guideline 36 equipment specifications](https://tpc.ashrae.org/?cmtKey=d536fedd-5057-4fc6-be3a-808233902f4c) ( [which can be purchased here](https://store.accuristech.com/ashrae/standards/guideline-36-2021-high-performance-sequences-of-operation-for-hvac-systems?product_id=2229690) easier for all.  
+I am putting this together to help others build upon this work.  My goal is to try and make testing skyspark projects agains [ASHRAE's Guideline 36 equipment specifications](https://tpc.ashrae.org/?cmtKey=d536fedd-5057-4fc6-be3a-808233902f4c) ( [which can be purchased here](https://store.accuristech.com/ashrae/standards/guideline-36-2021-high-performance-sequences-of-operation-for-hvac-systems?product_id=2229690) ) easier for all.  
 
 ## URLs i've referenced in learning Xeto 
 
@@ -32,3 +32,19 @@ https://github.com/haxall/haxall/releases
     ./xeto build ashrae.g36
 
 ## My testing process:
+First off I used VSCode to create a sort-of "prod" and "test" enviroment.  I do all my production in a clone of the [haxall](https://github.com/haxall/haxall) repository.  Then I copy those changes (after they build and test to my satisfaction) to this repo and push them up.  
+
+Then to test in skyspark I do the following: 
+1) copy the compliled xetolib file from my dev folder: \haxall\lib\xeto\ashrae.g36\ashrae.g36-0.X.X.xetolib
+   and paste it into skysparks xeto lib folder: skyspark\lib\xeto\ashrae.g36\
+2) reboot skyspark
+3) Open my test project
+4) goto "settings" app
+5) goto "using" tab
+6) enable the ashrae.g36 library (the version should match what you copied in)
+7) goto the "tools" app
+8) execute `xetoReload()` in the shell
+9) execute `specLibs()` in the shell to see that lib:ashrae.g36 shows up
+10) then run a test using the `fitsExplain()` command: example: `read(ahu).fitsExplain(G36SingleZoneAhu)`
+    it should return something (usually whats missing for required points)
+       
