@@ -9,7 +9,7 @@ purpose enough to use with any structured data including CSV, JSON, or SQL data.
 This repository is used to manage the source code for the standard libraries.
 
 # Update 9/3/2024 [^1]
-I wrote up my process and references in a notes file you can find here: [EnochRicksNotes](EnocRicksNotes.md).  This includes a detailed step by step instruction on how to take your complied xeto files an bring them into your skyspark enviroment for use and testing!. 
+I wrote up my process and references in a notes file you can find here: [EnochRicksNotes](EnocRicksNotes.md).  This includes a detailed step by step instruction on how to take your complied xeto files an bring them into your skyspark enviroment for use and testing! Scroll to the bottom to see my process step-by-step. 
 
 Cheers - EnochRick
 
