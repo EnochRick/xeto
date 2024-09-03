@@ -9,8 +9,12 @@ https://www.youtube.com/@briansfrank
 
 This is where I started digging to import my xeto files into my local instance of skyspark:
 https://skyfoundry.com/forum/topic/8089
+
 https://skyfoundry.com/forum/topic/8131
+
 https://skyfoundry.com/forum/topic/8084
+
+https://project-haystack.org/forum/topic/1115#c9
 
 
 I cloned Haxall for development purposes locally.  
