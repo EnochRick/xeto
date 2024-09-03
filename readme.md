@@ -11,7 +11,7 @@ This repository is used to manage the source code for the standard libraries.
 ## Please Note
 **I am having issues in skyspark that I am not having with the CLI axon.** 
 
-I am working on it, right now be cautious with this fork and please realize it's a work in progress. 
+I am working on it, right now be cautious with this fork and please realize it's a work in progress.  My issue is in my new ph.points version. It complies in CLI, but skyspark isnt happy with it.  Digging in, will keep you posted. 
 
 # Update 9/3/2024 [^1]
 I wrote up my process and references in a note file you can find here: [EnochRicksNotes](EnocRicksNotes.md).  This includes detailed step-by-step instructions on how to compile your xeto files and bring them into your SkySpark environment for use and testing! Please scroll to the bottom to see my process step-by-step. 
@@ -31,7 +31,9 @@ Known Issues:
 
 - [ ] #2: SiteAirPressureSensor was created, and it's intended to be a “Building Static Pressure” type, but I didn’t see a tag in Haystack for “whole building stuff” beyond the “site” tag.  Not sure the “site” tag’s intended use fits what I did here.  
 
-- [x] 3# The `misc-points.xeto` now has some types that could probably be merged into specific ph.points files, which would fit their intent and clean up `misc-points.xeto`.  I may make these changes to the source, but I am still testing the waters with this, so in the meantime, please “bless this mess” 😉 
+- [x] 3# The `misc-points.xeto` now has some types that could probably be merged into specific ph.points files, which would fit their intent and clean up `misc-points.xeto`.  I may make these changes to the source, but I am still testing the waters with this, so in the meantime, please “bless this mess” 😉
+
+- [ ] 4#: fix `ph.points` so local copy of skyspark can compile it
 
 Cheers - EnochRick
 
