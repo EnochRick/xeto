@@ -17,11 +17,11 @@ https://github.com/haxall/haxall/releases
 
 **Common Test commands I run in axon via terminal in vscode:**
     
-    `load(`https://project-haystack.org/example/download/charlie.zinc`)
-    `using("*")
-    `xetoReload() (reloads all specs into memory)
-    `read(ahu).fitsExplain(G36SingleZoneAhu)
+    `load(`https://project-haystack.org/example/download/charlie.zinc`)`
+    `using("*")`
+    `xetoReload() (reloads all specs into memory)`
+    `read(ahu).fitsExplain(G36SingleZoneAhu)`
 
 **Build commands**
 
-    `./xeto build ashrae.g36
+    `./xeto build ashrae.g36`
