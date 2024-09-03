@@ -19,8 +19,9 @@ https://github.com/haxall/haxall/releases
     
     load(`https://project-haystack.org/example/download/charlie.zinc`)
     using("*")
-    xetoReload() (reloads all specs into memory)
     read(ahu).fitsExplain(G36SingleZoneAhu)
+
+    xetoReload() (reloads all specs into memory)
 
 **Build commands**
 
