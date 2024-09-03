@@ -5,6 +5,8 @@
 // History:
 //   3 Nov 2022  Brian Frank  Creation
 //
+//    3 Sept 2024 Rick Stehmeyer: V 0.1.2 
+//      Added ReliefDamperCmd for ashrae.g36-0.1.4
 
 // Point associated with damper position; 0% is fully closed, 100% is fully open
 DamperPoint : NumberPoint <abstract> {
@@ -115,3 +117,16 @@ VentilationDamperSensor : DamperSensor { ventilation }
 // Used when there are separate ducts for minimum fresh air vs economizing.
 VentilationDamperCmd : DamperCmd { ventilation }
 
+//////////////////////////////////////////////////////////////////////////
+// Relief (for building pressure control)
+//
+// There is building pressure control built into GL36, and it also accommodates units
+// with relief fans (Fans located in the exhaust, as opposed to a return fan in the
+// return air stream).  - RS 3 Sept 2024
+//////////////////////////////////////////////////////////////////////////
+
+// For units with actuated relief dampers but no relief fan, used in building pressure control
+ReliefDamperCmd : DamperCmd { 
+    exhaust 
+    relief
+}

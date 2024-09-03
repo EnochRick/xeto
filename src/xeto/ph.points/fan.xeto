@@ -5,6 +5,8 @@
 // History:
 //   3 Nov 2022  Brian Frank  Creation
 //
+//    3 Sept 2024 Rick Stehmeyer: V 0.1.2 
+//      Added Relief fan specs (for building pressure control) for ashrae.g36-0.1.4
 
 // Point associated with a fan
 FanPoint : Point <abstract> {
@@ -78,4 +80,27 @@ ReturnFanSpeedSensor : FanSpeedSensor { return }
 // Percentage is 0% for off and 100% for full speed.
 ReturnFanSpeedCmd : FanSpeedCmd { return }
 
+//////////////////////////////////////////////////////////////////////////
+// Relief (for building pressure control)
+//
+// There is building pressure control built into GL36, and it also accommodates units
+// with relief fans (Fans located in the exhaust, as opposed to a return fan in the
+// return air stream).  - RS 3 Sept 2024
+//
+// Relief fans are enabled and disabled with their associated supply fans, 
+// but all relief fans that are running and serve a pressure zone run at the same speed.
+//////////////////////////////////////////////////////////////////////////
 
+// Sensor for secondary on/off state of fan in relief duct
+ReliefFanEnableSensor : FanEnableSensor { relief }
+
+// Command for secondary on/off state of fan in relief duct
+ReliefFanEnableCmd : FanEnableCmd { relief }
+
+// Sensor for fan speed as percentage in relief duct.
+// Percentage is 0% for off and 100% for full speed.
+ReliefFanSpeedSensor : FanSpeedSensor { relief }
+
+// Command for fan speed as percentage in relief duct.
+// Percentage is 0% for off and 100% for full speed.
+ReliefFanSpeedCmd : FanSpeedCmd { relief }

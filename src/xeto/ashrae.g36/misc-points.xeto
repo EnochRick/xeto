@@ -14,59 +14,20 @@
 WindowSwitch: {window, sensor, point}
 
 // Cooling Signal Allows for either hydronic cooling or Direct Expansion, Analog Output
-CoolingSignal : ChilledWaterValveCmd | DxCoolingSignal
+CoolingSignal : Choice
+// Valve commad for chilled water
+ChilledWaterValveCmd : ValveCmd { chilled, water }
+//Analog output to a Variable-Capacity Dx Compressor 
+DxCoolingSignal : NumberPoint & Cmd {dxCooling, unit: "%"}
 
 // Heating Signal Allows for hydronic heating or Direct Expansion, or Electric Resistance Analog Output
-HeatingSignal : HotWaterValveCmd | DxHeatingSignal | ElecHeating
-
-//Analog output to a Variable-Capacity Dx Compressor 
-DxCoolingSignal : NumberPoint & Cmd {
-    dxCooling
-    unit: "%"
-}
-
+HeatingSignal : Choice
+// Valve commad for hot water
+HotWaterValveCmd : ValveCmd { hot, water }
 //Analog output to a Variable-Capacity Dx Compressor
-DxHeatingSignal : NumberPoint & Cmd {
-    dxHeating
-    unit: "%"
-}
-
-//Outdoor air Filter Pressure Drop (analog input)
-OutdoorAirFilterPressureSensor : NumberPoint {
-    outdoor
-    air
-    filter
-    sensor
-}
-
-// There is building pressure control built into GL36, and it also accommodates units
-// with relief fans (Fans located in the exhaust, as opposed to a return fan in the
-// return air stream). The following points are for units with relief systems that I couldn’t
-// find elsewhere in ph.equips or ph.points - Maybe we'll 
-
-// For units with actuated relief dampers but no relief fan, used in building pressure control
-ReliefDamperCmd : DamperCmd { 
-    exhaust 
-    relief
-}//this could go into ph.points.damper.xeto
-
-// Relief fans are enabled and disabled with their associated supply fans, 
-// but all relief fans that are running and serve a pressure zone run at the same speed.
-// All of the following could go into "ph.points.fan.xeto"
-
-// Sensor for secondary on/off state of fan in relief duct
-ReliefFanEnableSensor : FanEnableSensor { relief }
-
-// Command for secondary on/off state of fan in relief duct
-ReliefFanEnableCmd : FanEnableCmd { relief }
-
-// Sensor for fan speed as percentage in relief duct.
-// Percentage is 0% for off and 100% for full speed.
-ReliefFanSpeedSensor : FanSpeedSensor { relief }
-
-// Command for fan speed as percentage in relief duct.
-// Percentage is 0% for off and 100% for full speed.
-ReliefFanSpeedCmd : FanSpeedCmd { relief }
+DxHeatingSignal : NumberPoint & Cmd { dxHeating, unit: "%" }
+// Heating by the conversion of electrical energy
+ElecHeating: HeatingProcess { elecHeating }
 
 // Sensor for differential air pressure sensor for building pressure control
 // I couldn’t find a "building" tag, the closest I could get was "site". Using 
