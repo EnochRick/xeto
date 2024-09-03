@@ -8,12 +8,12 @@ purpose enough to use with any structured data including CSV, JSON, or SQL data.
 
 This repository is used to manage the source code for the standard libraries.
 
-# Update 9/3/2024
+# Update 9/3/2024 [^1]
 I wrote up my process and references in a notes file you can find here: [EnochRicksNotes](EnocRicksNotes.md).  This includes a detailed step by step instruction on how to take your complied xeto files an bring them into your skyspark enviroment for use and testing!. 
 
 Cheers - EnochRick
 
-# Update 8/30/24 (read's chronologically from newest to oldest) 
+# Update 8/30/24 
 End of day update: Moved a bunch of new types into the misc-points.xeto.  Had to define some new things to fit the Guideline's intent for certain control sequences (like building pressure control). 
 
 Known Issues:
@@ -38,3 +38,5 @@ I forked this project for a couple of reasons:
 3) I noticed the GL36 example wasn't how I'd personally interpret GL36 to be used in Xeto, so i updated it and provided comments.
 
 I hope folks find my changes useful! Cheers - EnochRick
+
+[^1] All my updates will read chronologically from newest to oldest, with newest at the top. That way you can read my struggles like a story. 
