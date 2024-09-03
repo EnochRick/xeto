@@ -22,7 +22,7 @@ Added entries to the bottom of the following files in `ph.points`:
 
 Known Issues:
 
-- [X] #1: Ambiguous types for : CoolingSignal and HeatingSignal – I tried to set these up as OR types (trying to test how dynamic I can make the “fit” function).  It throws an “Ambiguous match for Point: ashrae.g36::CoolingSignal” error when using the “fitsExplain()”.  This is likely my fault for not quite working this out per Xeto’s intended use of “or” types. I now see I need to make them a "choice" type and reference the applicable entity types for GL36. 
+- [x] #1: Ambiguous types for : CoolingSignal and HeatingSignal – I tried to set these up as OR types (trying to test how dynamic I can make the “fit” function).  It throws an “Ambiguous match for Point: ashrae.g36::CoolingSignal” error when using the “fitsExplain()”.  This is likely my fault for not quite working this out per Xeto’s intended use of “or” types. I now see I need to make them a "choice" type and reference the applicable entity types for GL36. 
 
 - [ ] #2: SiteAirPressureSensor was created, and it's intended to be a “Building Static Pressure” type, but I didn’t see a tag in Haystack for “whole building stuff” beyond the “site” tag.  Not sure the “site” tag’s intended use fits what I did here.  
 
