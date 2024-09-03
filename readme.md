@@ -8,6 +8,9 @@ purpose enough to use with any structured data including CSV, JSON, or SQL data.
 
 This repository is used to manage the source code for the standard libraries.
 
+**I am having issues in skyspark that I am not having with the CLI axon. ** 
+I am working on it, right now be cautious with this fork and please realize it's a work in progress. 
+
 # Update 9/3/2024 [^1]
 I wrote up my process and references in a note file you can find here: [EnochRicksNotes](EnocRicksNotes.md).  This includes detailed step-by-step instructions on how to compile your xeto files and bring them into your SkySpark environment for use and testing! Please scroll to the bottom to see my process step-by-step. 
 
