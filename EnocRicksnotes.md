@@ -15,7 +15,7 @@ https://github.com/haxall/haxall/releases
 
 2) I forked the Xeto reposisotry (where you're currently looking) and setup vscode to allow me to do git commits and pushes after I tested my code against my development clone.  I just copy everything I do in development here once it complies and checks out againt my testing enviroment.
 
-**Common Test commands I run in axon via terminal in vscode:
+**Common Test commands I run in axon via terminal in vscode:**
     ```
     load(`https://project-haystack.org/example/download/charlie.zinc`)
     using("*")
@@ -23,6 +23,6 @@ https://github.com/haxall/haxall/releases
     read(ahu).fitsExplain(G36SingleZoneAhu)
     ```
 
-**Build commands
+**Build commands**
 
     `./xeto build ashrae.g36
