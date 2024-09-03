@@ -34,7 +34,7 @@ https://github.com/haxall/haxall/releases
 ## My testing process:
 First off I used VSCode to create a sort-of "prod" and "test" enviroment.  I do all my production in a clone of the [haxall](https://github.com/haxall/haxall) repository.  Then I copy those changes (after they build and test to my satisfaction) to this repo and push them up.  
 
-Then to test in skyspark I do the following: 
+> [!TIP] Then to test in skyspark I do the following: 
 1) copy the compliled xetolib file from my dev folder: \haxall\lib\xeto\ashrae.g36\ashrae.g36-0.X.X.xetolib
    and paste it into skysparks xeto lib folder: skyspark\lib\xeto\ashrae.g36\
 2) reboot skyspark
