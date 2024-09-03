@@ -7,7 +7,7 @@ I am putting this together to help others build upon this work.  My goal is to t
 The youtube Channel where Brian Frank Gives some great overviews
 https://www.youtube.com/@briansfrank
 
-This is where I started digging to import my xeto files into my local instance of skyspark:
+This is where I started digging for workflow ideas, general knowledge and for information on how to import my xeto files into my local instance of skyspark.  I eventually commented on one with this page. 
 https://skyfoundry.com/forum/topic/8089
 
 https://skyfoundry.com/forum/topic/8131
