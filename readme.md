@@ -39,4 +39,4 @@ I forked this project for a couple of reasons:
 
 I hope folks find my changes useful! Cheers - EnochRick
 
-[^1] All my updates will read chronologically from newest to oldest, with newest at the top. That way you can read my struggles like a story. 
+[^1]: All my updates will read chronologically from newest to oldest, with newest at the top. That way you can read my struggles like a story. 
