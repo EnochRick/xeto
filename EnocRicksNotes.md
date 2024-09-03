@@ -34,6 +34,10 @@ https://github.com/haxall/haxall/releases
 
     xetoReload() (reloads all specs into memory)
 
+    print(ashrae.g36::CoolingSignal) //Prints the spec for the CoolingSignal
+
+    print(G36SingleZoneAhu, {doc}) //Prints the spec for the G36 Single Zone AHU
+
 **Build commands**
 
     ./xeto build ashrae.g36
