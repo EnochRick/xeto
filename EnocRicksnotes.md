@@ -13,7 +13,7 @@ https://github.com/haxall/haxall/releases
 ## My development process:
 1) I cloned a local copy of Haxall in vscode and then worked off that cloned repository for building my modifications to GL36
 2) I loaded up GL36 points lists (section 4 of the [guildeline](https://store.accuristech.com/ashrae/standards/guideline-36-2021-high-performance-sequences-of-operation-for-hvac-systems?product_id=2229690) ) and started modifying the ahsrae.g36 xeto files accordingly. 
-3) I forked the Xeto reposisotry (where you're currently looking) and setup vscode to allow me to do git commits and pushes after I tested my code against my development clone.  I just copy everything I do in development here once it complies and checks out againt my testing enviroment.
+3) I forked the Xeto reposisotry (where you're currently looking) and setup vscode to allow me to do git commits and pushes after I tested my code against my development clone.  I just copy & paste everything I do in the development clone. The final tested code ends up here once it complies and checks out againt my testing enviroment.
 
 **Common Test commands I run in axon via terminal in vscode:**
     
