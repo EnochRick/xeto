@@ -54,13 +54,15 @@ First off I used VSCode to create a sort-of "prod" and "test" enviroment.  I do 
 >    `\haxall\lib\xeto\ashrae.g36\ashrae.g36-0.X.X.xetolib`
 >  and paste it into skyspark's xeto lib folder:
 >     `\skyspark\lib\xeto\ashrae.g36\`
-> 3) reboot skyspark
-> 4) Open my test project
-> 5) goto "settings" app
-> 6) goto "using" tab
-> 7) enable the ashrae.g36 library (the version should match what you copied in)
-> 8) goto the "tools" app
-> 9) execute `xetoReload()` in the shell
-> 10) execute `specLibs()` in the shell to see that lib:ashrae.g36 shows up
-> 11) Then run a test using the `fitsExplain()` command: example: `read(ahu).fitsExplain(G36SingleZoneAhu)` it should return something (usually what is missing for required points)
+> 3) Make sure to copy the src folders too:
+>    `\haxall\src\xeto\*.* -> \skyspark\src\xeto\*.*`
+> 5) reboot skyspark
+> 6) Open my test project
+> 7) goto "settings" app
+> 8) goto "using" tab
+> 9) enable the ashrae.g36 library (the version should match what you copied in)
+> 10) goto the "tools" app
+> 11) execute `xetoReload()` in the shell
+> 12) execute `specLibs()` in the shell to see that lib:ashrae.g36 shows up
+> 13) Then run a test using the `fitsExplain()` command: example: `read(ahu).fitsExplain(G36SingleZoneAhu)` it should return something (usually what is missing for required points)
        
