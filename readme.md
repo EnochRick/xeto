@@ -36,7 +36,7 @@ Known Issues:
 
 - [x] 3# The `misc-points.xeto` now has some types that could probably be merged into specific ph.points files, which would fit their intent and clean up `misc-points.xeto`.  I may make these changes to the source, but I am still testing the waters with this, so in the meantime, please “bless this mess” 😉
 
-- [ ] 4#: fix `ph.points` so local copy of skyspark can compile it
+- [x] 4#: fix `ph.points` so local copy of skyspark can compile it
 
 Cheers - EnochRick
 
