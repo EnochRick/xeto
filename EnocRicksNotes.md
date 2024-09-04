@@ -16,6 +16,8 @@ https://skyfoundry.com/forum/topic/8084
 
 https://project-haystack.org/forum/topic/1115#c9
 
+I am also reading and using the [Git manual](https://git-scm.com/book/en/v2).
+
 
 I cloned Haxall for development purposes locally.  
 https://haxall.io/
