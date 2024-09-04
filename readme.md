@@ -8,12 +8,10 @@ purpose enough to use with any structured data including CSV, JSON, or SQL data.
 
 This repository is used to manage the source code for the standard libraries.
 
-## Please Note
-**I am having issues in skyspark that I am not having with the CLI axon.** 
+# Update 9/4/204  [^1]
+I figured out the issue I was having yesterday with my testing setup in skyspark.  I modified my test procedure in [EnochRicksNotes](EnocRicksNotes.md) to correct the issue.  Things are now working properly again with this set of xeto files. 
 
-I am working on it, right now be cautious with this fork and please realize it's a work in progress.  My issue is in my new ph.points version. It complies in CLI, but skyspark isnt happy with it.  Digging in, will keep you posted. 
-
-# Update 9/3/2024 [^1]
+# Update 9/3/2024
 I wrote up my process and references in a note file you can find here: [EnochRicksNotes](EnocRicksNotes.md).  This includes detailed step-by-step instructions on how to compile your xeto files and bring them into your SkySpark environment for use and testing! Please scroll to the bottom to see my process step-by-step. 
 
 I also  implemented the "choice" type for the cooling signal and heating signal which fixed the ambiguous match exception.  Furthermore, I made the call to version ph.points and added the specs for things that were previously in the `ashrae.g36/misc-points.xeto` under `ashrae.g36`.  
@@ -24,6 +22,11 @@ Added entries to the bottom of the following files in `ph.points`:
 - fan.xeto
 
 `ph.points` has been versioned with these changed to v0.1.2 and the `ashrae.g36/lib.xeto` now requires this updated version. 
+
+## Please Note
+**I am having issues in skyspark that I am not having with the CLI axon.** 
+
+I am working on it, right now be cautious with this fork and please realize it's a work in progress.  My issue is in my new ph.points version. It complies in CLI, but skyspark isnt happy with it.  Digging in, will keep you posted. 
 
 Known Issues:
 
