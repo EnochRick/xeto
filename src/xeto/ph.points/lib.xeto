@@ -7,7 +7,6 @@
 //    3 Sept 2024 Rick Stehmeyer: V 0.1.2 
 //      Added specs to : air-pressure.xeto, damper.xeto, fan.xeto 
 
-
 pragma: Lib <
   doc: "Project haystack experimental points library"
   version: "0.1.2"
