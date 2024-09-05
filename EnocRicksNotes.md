@@ -78,4 +78,4 @@ First off I used VSCode to create a sort-of "prod" and "test" enviroment.  I do 
        
 Here is a picture of my setup:
 
-![VsCode Screenshot](/EnochRicksFolder/Example of Haxall VSCode Config.png)
+![VsCode Screenshot](/EnochRicksFolder/ExampleOfHaxallVSCode.png)
