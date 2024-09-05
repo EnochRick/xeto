@@ -9,7 +9,7 @@ purpose enough to use with any structured data including CSV, JSON, or SQL data.
 This repository is used to manage the source code for the standard libraries.
 
 # Update 9/5/204  [^1]
-Today I spent some time trying to get my updated `G36SingleZoneAhu` spec to pass `fitsExplain()` on a test skyspark model I developed that should pass.  I think my model isn't done correctly as its not passing the fitsExplain() properly. So I am going further into the model's various points indicated in the axon errors (see below)
+Today I spent some time trying to get my updated `G36SingleZoneAhu` spec to pass `fitsExplain()` on a test skyspark model I developed that should pass.  I think my model isn't done correctly as it's not passing the fitsExplain() properly. So I am going further into the model's various points indicated in the axon errors (see below)
 
   `msg:"6 errors"`
   
@@ -25,7 +25,7 @@ Today I spent some time trying to get my updated `G36SingleZoneAhu` spec to pass
   
   `msg:"Ambiguous match for Point: ph.points::ZoneAirTempSensor `
 
-This has shown me that I need to keep working on getting the spec to be dynamic enough to accept the GL36 equipment types that fit a Single Zone AHU.  I'll have to rethink how the spec checks the cooling / heating processes (right now I am just using a `chilledWaterCooling` tag, but a modern day single zone RTU could have VRF cooling / heating and this spec shouldn't balk at that.  Anyway, I am continuing to poke at this and refine my Xeto code.  Stay tuned,
+This has shown me that I need to keep working on getting the spec to be dynamic enough to accept the GL36 equipment types that fit a Single Zone AHU.  I must rethink how the spec checks the cooling/heating processes.  Right now I am just using a `chilledWaterCooling` tag, but a modern-day single-zone RTU could have VRF cooling/heating and this spec shouldn't balk at that.  Anyway, I continue to poke at this and refine my Xeto code.  Stay tuned,
 
 _Cheers, EnochRick_
 
