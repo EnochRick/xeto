@@ -11,7 +11,7 @@ This repository is used to manage the source code for the standard libraries.
 # Update 9/5/204  [^1]
 Today I spent some time trying to get my updated `G36SingleZoneAhu` spec to pass `fitsExplain()` on a test skyspark model I developed that should pass.  I think my model isn't done correctly as its not passing the fitsExplain() properly. So I am going further into the model's various points indicated in the axon errors (see below)
 
-  `msg:"8 errors"`
+  `msg:"6 errors"`
   
   `msg:"Missing required Point: ph.points::DischargeFanRunCmd"`
   
