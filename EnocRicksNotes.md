@@ -40,6 +40,14 @@ https://github.com/haxall/haxall/releases
 
     print(G36SingleZoneAhu, {doc}) //Prints the spec for the G36 Single Zone AHU
 
+    read(discharge and fan and run and cmd and point).fitsExplain(DischargeFanRunCmd) 
+        //This one is killing me, i made an example GL36 AHU in skyspark and I have an enum slot on there with "off, on" 
+        //which i get from the /src/xeto/ph.points/motor.xeto as:
+                // On and off enumeration
+                RunEnum: Enum { off, on }
+        //But then when I run the command above I get the following error: 
+        //Invalid value type for 'enum' - 'sys::Str' does not fit 'sys::Ref'
+
 **Build commands**
 
     ./xeto build ashrae.g36
