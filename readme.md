@@ -8,7 +8,23 @@ purpose enough to use with any structured data including CSV, JSON, or SQL data.
 
 This repository is used to manage the source code for the standard libraries.
 
-# Update 9/4/204  [^1]
+# Update 9/5/204  [^1]
+Today I spent some time trying to get my updated `G36SingleZoneAhu` spec to pass fitsExplain() on a test skyspark model I developed that should pass.  I think my model isn't done correctly as its not passing the fitsExplain() properly. So I am going further into the model's various points indicated in the axon errors (see below)
+
+  `msg:"8 errors"
+  msg:"Missing required Point: ph.points::DischargeFanRunCmd"
+  msg:"Missing required Point: ph.points::DischargeFanSpeedCmd"
+  msg:"Missing required Point: ph.points::OutsideDamperCmd"
+  msg:"Missing required Point: ashrae.g36::CoolingSignal"
+  msg:"Missing required Point: ashrae.g36::HeatingSignal"
+  msg:"Ambiguous match for Point: ph.points::ZoneAirTempSensor `
+
+This has shown me that I need to keep working on getting the spec to be dynamic enough to accept the GL36 equipment types that fit a Single Zone AHU.  I'll have to rethink how the spec checks the cooling / heating processes (right now I am just using a `chilledWaterCooling` tag, but a modern day single zone RTU could have VRF cooling / heating and this spec shouldn't balk at that.  Anyway, I am continuing to poke at this and refine my Xeto code.  Stay tuned,
+
+_Cheers, EnochRick_
+
+
+# Update 9/4/204  
 I figured out the issue I was having yesterday with my testing setup in skyspark.  I modified my test procedure in [EnochRicksNotes](https://github.com/EnochRick/xeto/blob/master/EnocRicksNotes.md#my-testing-process) to correct the issue.  Things are now working properly again with this set of xeto files. 
 
 # Update 9/3/2024
@@ -38,7 +54,7 @@ Known Issues:
 
 - [x] 4#: fix `ph.points` so local copy of skyspark can compile it (had an issue with my copy of the original repo, restored and this corrected my issue locally) 
 
-Cheers - EnochRick
+_Cheers - EnochRick_
 
 # Update 8/30/24 
 End of day update: Moved a bunch of new types into the misc-points.xeto.  Had to define some new things to fit the Guideline's intent for certain control sequences (like building pressure control). 
@@ -56,6 +72,6 @@ I forked this project for a couple of reasons:
 2) I wanted to learn Xeto and be able to build and use it in axon
 3) I noticed the GL36 example wasn't how I'd personally interpret GL36 to be used in Xeto, so I updated it and provided comments.
 
-I hope folks find my changes useful! Cheers - EnochRick
+I hope folks find my changes useful! _Cheers - EnochRick_
 
 [^1]: All my updates will read chronologically from newest to oldest, with the newest at the top. That way you can read my struggles like a story. 
