@@ -77,4 +77,5 @@ First off I used VSCode to create a sort-of "prod" and "test" enviroment.  I do 
 > 13) Then run a test using the `fitsExplain()` command: example: `read(ahu).fitsExplain(G36SingleZoneAhu)` it should return something (usually what is missing for required points)
        
 Here is a picture of my setup:
-![VsCode Screenshot](EnochRicksFolder/Example of Haxall VSCode Config.png)
+
+![VsCode Screenshot](/EnochRicksFolder/Example of Haxall VSCode Config.png)
