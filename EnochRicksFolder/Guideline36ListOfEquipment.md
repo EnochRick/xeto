@@ -1,3 +1,7 @@
+# Where can I buy this super helpful document full of awesome high performance sequence of operations? 
+
+[You can buy it from ASHRAE!](https://store.accuristech.com/ashrae/standards/guideline-36-2021-high-performance-sequences-of-operation-for-hvac-systems?product_id=2229690)
+
 # List of Equipment Covered in Guideline 36
 
 Section 5.2 – Generic Ventilation Zones
