@@ -9,7 +9,9 @@ purpose enough to use with any structured data including CSV, JSON, or SQL data.
 This repository is used to manage the source code for the standard libraries.
 
 # Update 10/14/24  [^1]
-Been very busy at work these days.  I'm excited to jump back into this project.  I am not sure how much interest there is in my further development of GL36 specs.  Please watch this project as a metric I can follow to determine industry interest.  Or drop me an email.  Thank you for being so patient on this!
+Been very busy at work these days.  I'm excited to jump back into this project.  I am not sure how much interest there is in my further development of GL36 specs.  Please watch this project as a metric I can follow to determine industry interest.  Or drop me an email.  Thank you for being so patient on this!  I will be at Skyposium this week so try to find me there if you're around! 
+
+-Cheers
 
 # Update 9/30/24  [^1]
 
