@@ -8,7 +8,18 @@ purpose enough to use with any structured data including CSV, JSON, or SQL data.
 
 This repository is used to manage the source code for the standard libraries.
 
-# Update 9/5/204  [^1]
+# Update 10/14/24  [^1]
+Been very busy at work these days.  I'm excited to jump back into this project.  I am not sure how much interest there is in my further development of GL36 specs.  Please use the "watch this project" as a way of telling me you're interested! I'll use it as a metric I can follow to determine industry interest.  I do plan on continuing this work regardless, I am just curious who out there might make use of it. You can also drop me an email.  Thank you for being so patient on this!  I will be at Skyposium this week so try to find me there if you're around! 
+
+-Cheers
+
+# Update 9/30/24  [^1]
+
+Today I uploaded a  list of equipoment to be covered and their reference setions in GL36. 
+
+You can find it here [List Of Equipment](/EnochRicksFolder/Guideline36ListOfEquipment.md)
+
+# Update 9/5/204 
 Today I spent some time trying to get my updated `G36SingleZoneAhu` spec to pass `fitsExplain()` on a test skyspark model I developed that should pass.  I think my model isn't done correctly as it's not passing the fitsExplain() properly. So I am going further into the model's various points indicated in the axon errors (see below)
 
   `msg:"6 errors"`

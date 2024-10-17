@@ -1,3 +1,7 @@
+# Where can I buy this super helpful document full of awesome high performance sequence of operations? 
+
+[You can buy it from ASHRAE!](https://store.accuristech.com/ashrae/standards/guideline-36-2021-high-performance-sequences-of-operation-for-hvac-systems?product_id=2229690)
+
 # List of Equipment Covered in Guideline 36
 
 Section 5.2 – Generic Ventilation Zones
@@ -24,9 +28,9 @@ Section 5.13 – Dual-Duct VAV Terminal Unit − Mixing Control with Discharge A
 
 Section 5.14 – Dual-Duct VAV Terminal Unit − Cold-Duct Minimum Control
 
-Section 5.15 – Air-Handling Unit System Modes (with AFDD)
+Section 5.15 – Air-Handling Unit System Modes
 
-Section 5.16 – Multiple-Zone VAV Air-Handling Unit (with AFDD)
+Section 5.16 – Multiple-Zone VAV Air-Handling Unit
 
 Section 5.17 – Dual-Fan Dual-Duct Heating VAV Air-Handling Unit
 
